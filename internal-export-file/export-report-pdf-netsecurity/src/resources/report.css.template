@@ -27,18 +27,10 @@
 }
 
 @page {
-  @top-center {
-    background: #000;
-    color: #fff;
-    content:  string(marking);
-    font-size: 12pt;
-    font-weight: 500;
-    height: 14pt;
-    margin: 0 4px 18px;
-    width: auto;
-  }
+  margin-top: 0;
+  @top-center { content: none }
   @bottom-left {
-    background: <secondary_color>;
+    background: #023453;
     color: #fff;
     content: counter(page);
     height: 1cm;
@@ -46,7 +38,7 @@
     width: 1cm;
   }
   @bottom-center {
-    background: <secondary_color>;
+    background: #023453;
     content: '';
     display: block;
     height: .05cm;
@@ -72,12 +64,24 @@
   @bottom-right { content: none }
 }
 @page :first {
-  background: <secondary_color>;
+  background: #023453;
+  /* Custom background image */
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  
   margin: 0;
   @top-center { content: none }
 }
+@page last_page {
+  @bottom-center { content: none }
+  @bottom-right { content: none };
+  @bottom-left { content: none };
+  margin-top: 0;
+  margin-bottom: 0;
+}
 @page chapter {
-  background: <secondary_color>;
+  background: #023453;
   margin: 0;
   @top-left { content: none }
   @top-center { content: none }
@@ -85,24 +89,34 @@
 }
 
 #report-marking {
+  position: relative;
+  background: #000;
+  color: #fff;
+  font-size: 12pt;
+  font-weight: 500;
+  /* height: 14pt; */
   width: 0;
   height: 0;
-  visibility: hidden;
+  /*margin: 0 4px 18px;*/
   string-set: marking content();
+  visibility: hidden;
 }
 
 html {
-  color: <secondary_color>;
+  color: black;
   font-family: Fira Sans;
   font-size: 11pt;
   font-weight: 300;
   line-height: 1.5;
 }
+body {
+  margin-top: 0;
+}
 
 h1 {
-  color: <primary_color>;
+  color: #df1e44;
   font-size: 38pt;
-  margin: 4cm 0 0 2cm;
+  margin: 0cm 0 0 2cm;
   @page: no-chapter;
   width: 100%;
 }
@@ -114,8 +128,8 @@ h2 {
   break-before: always;
   @page: no-chapter;
   font-size: 28pt;
-  color: <primary_color>;
-  background: <secondary_color>;
+  color: #df1e44;
+  background: #023453;
   margin: 0 -3cm 1cm;
   padding: 1cm 1cm 1cm 3cm;
   width: 21cm;
@@ -137,6 +151,10 @@ img {
   height: 297mm;
   position: relative;
 }
+#cover #report-title {
+  position: absolute;
+  top: 30%;
+}
 #cover #report-date {
   color: #ffffff;
   font-size: 12pt;
@@ -144,6 +162,9 @@ img {
   margin: 0 18px 0 auto;
   float: right;
 }
+/*#cover h1 {
+  margin-top: 30%;
+}*/
 #cover #report-name {
   color: #ffffff;
   font-size: 38pt;
@@ -151,18 +172,12 @@ img {
   margin: 0 2cm;
   overflow-wrap: break-word;
 }
-#cover #report-address {
-  background: <primary_color>;
+#cover .logo {
   position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 2cm 0;
-}
-#cover address {
-  overflow-wrap: break-word;
-  white-space: pre;
+  top: 87%; /* Adjust the top and right values as needed */
+  right: 5%;
+  width: 350px; /* Adjust the width of the logo as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 #contents h2 {
   font-size: 33pt;
@@ -174,7 +189,7 @@ img {
   margin: 3em 0 1em;
 }
 #contents h3::before {
-  background: <primary_color>;
+  background: #df1e44;
   content: '';
   display: block;
   height: .08cm;
@@ -191,7 +206,7 @@ img {
   padding-top: .25cm;
 }
 #contents ul li::before {
-  color: <primary_color>;
+  color: #df1e44;
   content: '• ';
   font-size: 40pt;
   line-height: 16pt;
@@ -205,7 +220,7 @@ img {
   content: target-text(attr(href));
 }
 #contents ul li a::after {
-  color: <secondary_color>;
+  color: #023453;
   content: target-counter(attr(href), page);
   float: right;
 }
@@ -219,7 +234,7 @@ section {
 }
 
 #observables h3 {
-  background: <primary_color>;
+  background: #df1e44;
   margin: 0 -3cm 1cm;
   padding: 1cm 1cm 1cm 3cm;
   width: 21cm;
@@ -240,8 +255,8 @@ td {
   padding: 15px;
 }
 th {
-  background-color: <secondary_color>;
-  color: <primary_color>;
+  background-color: #023453;
+  color: #df1e44;
   text-align: left;
   padding: 15px;
 }
@@ -249,6 +264,9 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
+#external-references {
+  page: last_page;
+}
 #external-references ul {
   list-style: none;
   padding-left: 0;
@@ -259,7 +277,7 @@ tr:nth-child(even) {
   padding-top: .25cm;
 }
 #external-references ul li::before {
-  color: <primary_color>;
+  color: #df1e44;
   content: '• ';
   font-size: 40pt;
   line-height: 16pt;
@@ -268,6 +286,28 @@ tr:nth-child(even) {
 #external-references ul li a {
   color: inherit;
   text-decoration-line: inherit;
+}
+#external-references #report-address {
+  color: white;
+  background: #023453;
+  position: absolute;
+  bottom: 0;
+  left: -2%;
+  width: 102%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  string-set: address content();
+  padding: 0cm 2cm 0cm 2cm;
+}
+#external-references address {
+  font-size: 9px;
+  overflow-wrap: break-word;
+  white-space: pre;
+  margin: auto;
+}
+#external-references address b {
+  font-size: 13px;
 }
 #chapter {
   align-items: center;
