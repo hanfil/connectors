@@ -28,7 +28,7 @@
 
 @page {
   @top-center {
-    color: string(markingcolor);
+    color: {{ case_marking[4:].lower() }};
     content:  string(marking);
     font-size: 12pt;
     font-weight: 500;
