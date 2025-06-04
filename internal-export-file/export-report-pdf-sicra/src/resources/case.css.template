@@ -38,11 +38,9 @@
   }
   @top-left {
     background: url('Sicra-Logo-Lockup-Horizontal-Black.png');
-    font-size: 12pt;
-    font-weight: 500;
-    height: 14pt;
+    background-repeat: no-repeat;
+    background-size: 14pt;
     margin: 0 4px 18px;
-    width: auto;
   }
   @bottom-left {
     background: <secondary_color>;
