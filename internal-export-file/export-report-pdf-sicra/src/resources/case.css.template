@@ -102,7 +102,9 @@
 }
 #case-contact {
   top: 0;
-  float: right;
+  right: 0;
+  position: fixed;
+  line-height: 0%;
 }
 
 html {
@@ -130,7 +132,7 @@ h2 {
   font-size: 28pt;
   color: <primary_color>;
   margin: 0 -3cm 1cm;
-  padding: 1cm 1cm 1cm 3cm;
+  padding: 1cm 1cm 1cm 1cm;
   width: 21cm;
   string-set: heading content();
 }
