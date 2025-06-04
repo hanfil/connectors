@@ -255,7 +255,7 @@ td {
 }
 th {
   background-color: <secondary_color>;
-  color: <primary_color>;
+  color: #ffffff;
   text-align: left;
   padding: 15px;
 }
