@@ -835,7 +835,7 @@ class ExportReportPdf:
         env = Environment(
             loader=FileSystemLoader(self.current_dir), finalize=self._finalize
         )
-        print(context) #debug
+        self.helper.log_debug(f"{context}") #debug
         template = env.get_template("resources/case.html")
         html_string = template.render(context)
 
