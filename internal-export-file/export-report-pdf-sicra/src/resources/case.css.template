@@ -116,7 +116,7 @@ html {
 }
 
 h1 {
-  color: <primary_color>;
+  color: <secondary_color>;
   font-size: 38pt;
   margin: 4cm 0 0 2cm;
   @page: no-chapter;
@@ -130,7 +130,7 @@ h2 {
   break-before: always;
   @page: no-chapter;
   font-size: 28pt;
-  color: <primary_color>;
+  color: <secondary_color>;
   margin: 0 -3cm 1cm;
   padding: 1cm 1cm 1cm 1cm;
   width: 21cm;
