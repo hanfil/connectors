@@ -28,7 +28,7 @@
 
 @page {
   @top-center {
-    color: string({{ marking[4:] }});
+    color: string(marking);
     content:  string(marking);
     font-size: 12pt;
     font-weight: 500;
