@@ -28,7 +28,7 @@
 
 @page {
   @top-center {
-    color: string(marking-color);
+    color: red;
     content:  string(marking);
     font-size: 12pt;
     font-weight: 500;
@@ -40,7 +40,7 @@
     background: url('Sicra-Logo-Lockup-Horizontal-Black.png');
     background-size: 40px auto;
     background-repeat: no-repeat;
-    height: 10pt;
+    height: 40px;
     margin: 0 4px 18px;
   }
   @bottom-left {
@@ -81,7 +81,7 @@
   margin: 0;
   @top-center { content: none }
   background: url(cover.png);
-  background-position: center;
+  background-position: 40% center;
 }
 @page chapter {
   background: <secondary_color>;
@@ -117,7 +117,7 @@ h1 {
   font-size: 38pt;
   margin: 4cm 0 0 2cm;
   @page: no-chapter;
-  width: 100%;
+  /* width: 100%; */
 }
 h2, h3, h4 {
   color: black;
