@@ -40,15 +40,6 @@
     content: url('Sicra-Logo-Lockup-Horizontal-WithoutR-Black.svg');
     margin: 4px 4px 18px;
   }
-  @top-right {
-    color: #fff;
-    content:  string(contact);
-    font-size: 12pt;
-    font-weight: 500;
-    height: 14pt;
-    margin: 0 4px 18px;
-    width: auto;
-  }
   @bottom-left {
     background: <secondary_color>;
     color: #fff;
@@ -110,10 +101,8 @@
   string-set: markingcolor content();
 }
 #case-contact {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  string-set: contact content();
+  top: 0;
+  float: right;
 }
 
 html {
@@ -129,7 +118,7 @@ h1 {
   font-size: 38pt;
   margin: 4cm 0 0 2cm;
   @page: no-chapter;
-  /* width: 100%; */
+  width: 100%;
 }
 h2, h3, h4 {
   color: black;
@@ -140,9 +129,8 @@ h2 {
   @page: no-chapter;
   font-size: 28pt;
   color: <primary_color>;
-  background: <secondary_color>;
   margin: 0 -3cm 1cm;
-  padding: 1cm 1cm 1cm 3cm;
+  /* padding: 1cm 1cm 1cm 3cm; */
   width: 21cm;
   string-set: heading content();
 }
