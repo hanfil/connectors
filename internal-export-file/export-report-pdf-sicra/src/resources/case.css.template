@@ -37,7 +37,7 @@
     width: auto;
   }
   @top-left {
-    content: url(file://Sicra-Logo-Lockup-Horizontal-Black.png);
+    content: url('Sicra-Logo-Lockup-Horizontal-Black.png');
     font-size: 12pt;
     font-weight: 500;
     height: 14pt;
