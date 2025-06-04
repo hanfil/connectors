@@ -28,7 +28,7 @@
 
 @page {
   @top-center {
-    color: {{ marking[4:] }};
+    color: string({{ marking[4:] }});
     content:  string(marking);
     font-size: 12pt;
     font-weight: 500;
@@ -37,10 +37,12 @@
     width: auto;
   }
   @top-left {
-    background: url('Sicra-Logo-Lockup-Horizontal-Black.png');
-    background-repeat: no-repeat;
-    background-size: 14pt;
+    content: url('Sicra-Logo-Lockup-Horizontal-Black.png');
+    font-size: 12pt;
+    font-weight: 500;
+    height: 8pt;
     margin: 0 4px 18px;
+    width: auto;
   }
   @bottom-left {
     background: <secondary_color>;
