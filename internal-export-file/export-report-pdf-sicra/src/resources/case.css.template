@@ -117,7 +117,7 @@
 }
 
 html {
-  color: <secondary_color>;
+  /* color: <secondary_color>; */
   font-family: Fira Sans;
   font-size: 11pt;
   font-weight: 300;
