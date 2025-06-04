@@ -38,7 +38,7 @@
   }
   @top-left {
     content: url('Sicra-Logo-Lockup-Horizontal-WithoutR-Black.svg');
-    margin: 4px 4px 18px;
+    margin: 8px 4px 18px;
   }
   @bottom-left {
     background: <secondary_color>;
