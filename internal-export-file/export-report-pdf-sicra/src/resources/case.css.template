@@ -28,7 +28,7 @@
 
 @page {
   @top-center {
-    color: red;
+    color: string(markingcolor);
     content:  string(marking);
     font-size: 12pt;
     font-weight: 500;
@@ -37,10 +37,7 @@
     width: auto;
   }
   @top-left {
-    background: url('Sicra-Logo-Lockup-Horizontal-Black.png');
-    background-size: 40px auto;
-    background-repeat: no-repeat;
-    height: 40px;
+    content: url('Sicra-Logo-Lockup-Horizontal-WithoutR-Black.svg');
     margin: 0 4px 18px;
   }
   @bottom-left {
@@ -81,7 +78,7 @@
   margin: 0;
   @top-center { content: none }
   background: url(cover.png);
-  background-position: 40% center;
+  background-position: 60% center;
 }
 @page chapter {
   background: <secondary_color>;
@@ -100,8 +97,8 @@
 #case-marking-color {
   width: 0;
   height: 0;
-  visibility: hidden;
-  string-set: marking-color content();
+  /* visibility: hidden;*/
+  string-set: markingcolor content();
 }
 
 html {
@@ -162,7 +159,7 @@ h4 {
   overflow-wrap: break-word;
 }
 #cover #case-address {
-  background: <primary_color>;
+  /* background: <primary_color>; */
   position: absolute;
   bottom: 0;
   width: 100%;
