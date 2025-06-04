@@ -38,9 +38,7 @@
   }
   @top-left {
     content: url('Sicra-Logo-Lockup-Horizontal-Black.png');
-    font-size: 12pt;
-    font-weight: 500;
-    height: auto;
+    height: 10px;
     margin: 0 4px 18px;
   }
   @bottom-left {
@@ -97,7 +95,7 @@
   visibility: hidden;
   string-set: marking content();
 }
-#case-marking {
+#case-marking-color {
   width: 0;
   height: 0;
   visibility: hidden;
