@@ -81,6 +81,7 @@
   background: <secondary_color>;
   margin: 0;
   @top-center { content: none }
+  background: url(cover.png);
 }
 @page chapter {
   background: <secondary_color>;
