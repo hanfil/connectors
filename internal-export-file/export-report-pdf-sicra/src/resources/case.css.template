@@ -37,8 +37,10 @@
     width: auto;
   }
   @top-left {
-    content: url('Sicra-Logo-Lockup-Horizontal-Black.png');
-    height: 10px;
+    background: url('Sicra-Logo-Lockup-Horizontal-Black.png');
+    background-size: 40px auto;
+    background-repeat: no-repeat;
+    height: 10pt;
     margin: 0 4px 18px;
   }
   @bottom-left {
@@ -76,10 +78,10 @@
   @bottom-right { content: none }
 }
 @page :first {
-  background: <secondary_color>;
   margin: 0;
   @top-center { content: none }
   background: url(cover.png);
+  background-position: center;
 }
 @page chapter {
   background: <secondary_color>;

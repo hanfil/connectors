@@ -9,7 +9,7 @@
     <body>
         <article id="cover">
             <div id="case-marking">{{ case_marking }}</div>
-            <div id="case-marking-color">{{ case_marking[4:] }}</div>
+            <div id="case-marking-color">{{ case_marking[4:].lower() }}</div>
             <div id="case-date">{{ case_report_date }}</div>
             <h1>Hendelsesrapport</h1>
             <div id="case-name">{{ case_name }}</div>
@@ -17,7 +17,6 @@
                 <address>
                     {{ company_address_line_1 }}
                     {{ company_address_line_2 }}
-                    {{ company_address_line_3 }}
                     {{ company_phone_number }}
                 </address>
                 <address>
