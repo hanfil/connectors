@@ -13,16 +13,9 @@
             <div id="case-date">{{ case_report_date }}</div>
             <h1>Hendelsesrapport</h1>
             <div id="case-name">{{ case_name }}</div>
-            <div id="case-address">
-                <address>
-                    {{ company_address_line_1 }}
-                    {{ company_address_line_2 }}
-                    {{ company_phone_number }}
-                </address>
-                <address>
-                    {{ company_email }}
-                    {{ company_website }}
-                </address>
+            <div id="case-contact">
+                <p>{{ company_email }}</p>
+                <p>{{ company_phone_number }}</p>
             </div>
         </article>
 
