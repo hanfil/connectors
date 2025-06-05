@@ -314,9 +314,6 @@ td pre {
 }
 
 .attack-chain-sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
   width: 120px;
   height: 100vh;
   background: transparent;
@@ -325,7 +322,7 @@ td pre {
   align-items: center;
   justify-content: flex-start;
   z-index: 100;
-  padding-top: 16px;
+  padding-top: 2cm;
 }
 
 .sidebar-step {
