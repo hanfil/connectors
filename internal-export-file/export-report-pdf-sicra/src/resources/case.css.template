@@ -338,7 +338,7 @@ td pre {
   justify-content: center;
   z-index: 100;
   margin-top: 1cm;
-  margin-right: 1cm;
+  margin-left: 2cm;
 }
 
 .phase-section .sidebar-step {
@@ -347,7 +347,7 @@ td pre {
   align-items: center;
   margin: 18px;
   opacity: 0.28;
-  width: 56px;
+  width: 60px;
 }
 .phase-section .active {
   opacity: 1;
