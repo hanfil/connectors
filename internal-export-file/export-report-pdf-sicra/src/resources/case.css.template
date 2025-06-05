@@ -244,7 +244,9 @@ section {
   padding: 1cm 1cm 1cm 3cm;
   width: 21cm;
 }
-
+figure {
+  margin-left: -1cm;
+}
 table {
   margin: auto 0;
   caption-side: top;
