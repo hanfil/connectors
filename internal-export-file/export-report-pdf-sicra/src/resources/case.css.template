@@ -83,7 +83,7 @@
 }
 
 #case-marking {
-  bottom: 0;
+  bottom: -1cm;
   position: fixed;
   align-content: center;
 }
