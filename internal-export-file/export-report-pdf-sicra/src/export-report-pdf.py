@@ -774,6 +774,17 @@ class ExportReportPdf:
             }],
             "filterGroups": []
         }
+        self.helper.api_impersonate.vocabulary.properties = """
+            id
+            name
+            description
+            category {
+                key
+                fields {
+                    key
+                }
+            }
+        """
         case_priority_desc = self.helper.api_impersonate.vocabulary.read(filters=case_priority_filters)
         # Store context for usage in html template
         context = {
