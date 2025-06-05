@@ -1291,6 +1291,15 @@ class ExportReportPdf:
             "response_types": response_types,
             "entities": {},
             "observables": {},
+            "cyber_attack_lifecycle": {
+                "reconnaissance": [],
+                "weaponization": [],
+                "delivery": [],
+                "exploitation": [],
+                "installation": [],
+                "command-and-control": [],
+                "actions-on-objectives": []
+            },
         }
 
         object_ids = []
@@ -1310,6 +1319,16 @@ class ExportReportPdf:
 
             # Process each STIX Object
             for entity in entities_list:
+                # Custom code: Add to cyber-attack-lifecycle list
+                for item in entity:
+                    if not item.get("killChainPhases", []):
+                        continue # Continue to the next object in the entity list
+                    # Check to see if there is a cyber-attack-lifecycle killchain
+                    for killChainPhase in item["killChainPhases"]:
+                        if killChainPhase["kill_chain_name"] == "cyber-attack-lifecycle":
+                            context["cyber_attack_lifecycle"][killChainPhase["phase_name"]].append(item)
+                # ------ #
+                
                 obj_entity_type = entity["entity_type"]
                 if obj_entity_type == "StixFile" or StixCyberObservableTypes.has_value(
                     obj_entity_type
