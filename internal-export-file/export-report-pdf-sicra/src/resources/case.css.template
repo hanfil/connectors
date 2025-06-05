@@ -245,7 +245,7 @@ section {
   width: 21cm;
 }
 figure {
-  margin-left: -0.5cm;
+  margin-left: -0.4cm;
 }
 table {
   margin: auto 0;
