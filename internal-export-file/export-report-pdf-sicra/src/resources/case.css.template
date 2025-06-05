@@ -170,6 +170,7 @@ h4 {
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
   margin: 1cm 1cm 1cm 1cm;
   width: 200px; /* or your desired size */
 }
