@@ -839,7 +839,7 @@ class ExportReportPdf:
                 ):
                     # If only include indicators and
                     # the observable doesn't have an indicator, skip it
-                    if self.indicators_only and not entity["indicators"]:
+                    if self.indicators_only and not entity.get("indicators", []):
                         self.helper.log_info(
                             f"Skipping {obj_entity_type} observable with value {entity['observable_value']} as it was not an Indicator."
                         )
