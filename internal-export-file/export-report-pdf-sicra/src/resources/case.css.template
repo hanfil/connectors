@@ -68,7 +68,10 @@
 @page :first {
   margin: 0;
   @top-center { content: none }
-  @top-left {}
+  @top-left {
+    margin-left: 2cm;
+    margin-top: 2cm;
+  }
   background: url(cover.png);
   background-position: 60% center;
 }
@@ -142,11 +145,10 @@ h4 {
   font-size: 12pt;
   font-weight: 500;
   bottom: 18px;
-  right: 0;
-  top: 0;
+  float: right;
 }
 #cover #case-name {
-  color: #ffffff;
+  color: #f54f46;
   font-size: 38pt;
   font-weight: 700;
   margin: 0 2cm;
