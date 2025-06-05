@@ -168,9 +168,8 @@ h4 {
 }
 #cover #cover-logo {
   position: absolute;
-  bottom: 0;
+  top: 5cm;
   left: 0;
-  display: flex;
   margin: 1cm 1cm 1cm 1cm;
   width: 200px; /* or your desired size */
 }
@@ -321,16 +320,16 @@ td pre {
   align-items: flex-start;
 }
 
-.main-content {
+.phase-section .main-content {
   flex: 1;
   width: 100%;
   /* Optional: add margin-right if you want spacing */
 }
-.main-content h2, h3{
+.phase-section .main-content h2, h3{
   width: 21cm;
 }
 
-.attack-chain-sidebar {
+.phase-section .attack-chain-sidebar {
   width: 120px;
   height: 100vh;
   background: transparent;
@@ -342,30 +341,31 @@ td pre {
   padding-top: 1cm;
 }
 
-.sidebar-step {
+.phase-section .sidebar-step {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 18px 60px;
+  margin: 18px;
   opacity: 0.28;
+  width: 80px;
+}
+.phase-section .active {
+  opacity: 1;
 }
 
-.sidebar-icon {
+.phase-section .sidebar-step .sidebar-icon {
   width: 56px;
   height: 56px;
   margin-bottom: 4px;
   justify-content: center;
 }
 
-.sidebar-label {
+.phase-section .sidebar-step .sidebar-label {
   font-size: 12px;
   font-weight: bold;
   text-align: center;
   color: #b0b0b0;
   letter-spacing: 1px;
-  width: 56px;
+  width: 100%;
 }
 
-.active {
-  opacity: 1;
-}
