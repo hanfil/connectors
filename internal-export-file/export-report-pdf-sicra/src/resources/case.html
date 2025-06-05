@@ -121,7 +121,6 @@
 
 
         <article id="contents">
-            {% set current_section = 'cyber_kill_chain' %}
             {% set phases = [
                 {'id': 'analysis-recon', 'key': 'recon', 'title': 'Fase 1: Rekognosering', 'icon': 'recon.svg', 'label': 'RECON'},
                 {'id': 'analysis-delivery', 'key': 'delivery', 'title': 'Fase 2: Initiell sårbarhetsvektor', 'icon': 'delivery.svg', 'label': 'DELIVERY'},
@@ -134,23 +133,49 @@
             <section id="break">
                 <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
                 
-                <!-- Sidebar positioned at the beginning -->
-                {% if current_section == 'cyber_kill_chain' %}
-                <div class="attack-chain-sidebar">
-                    {% for phase in phases %}
-                    <div class="sidebar-step" data-phase="{{ phase.key }}">
-                        <img src="{{ phase.icon }}" alt="{{ phase.label }}" class="sidebar-icon">
-                        <div class="sidebar-label">{{ phase.label | safe }}</div>
-                    </div>
-                    {% endfor %}
-                </div>
-                {% endif %}
+                
             </section>
 
             {% for phase in phases %}
             <section id="break" class="phase-section" data-phase="{{ phase.key }}">
                 <h3 id="{{ phase.id }}">{{ phase.title }}</h3>
+                <!-- Sidebar positioned at the beginning -->
+                <div class="attack-chain-sidebar">
+                    <div class="sidebar-step" data-phase="{{ phase.key }}">
+                        <img src="{{ phase.icon }}" alt="{{ phase.label }}" class="sidebar-icon">
+                        <div class="sidebar-label">{{ phase.label | safe }}</div>
+                    </div>
+
+                    <div class="attack-chain-sidebar">
+                    <div class="sidebar-step {% if phase.id == 'analysis-recon' %}active{% endif %}">
+                        <img src="recon.svg" alt="Recon" class="sidebar-icon">
+                        <div class="sidebar-label">RECON</div>
+                    </div>
+                    <div class="sidebar-step {% if phase.id == 'analysis-delivery' %}active{% endif %}">
+                        <img src="delivery.svg" alt="Delivery" class="sidebar-icon">
+                        <div class="sidebar-label">DELIVERY</div>
+                    </div>
+                    <div class="sidebar-step {% if phase.id == 'analysis-exploit' %}active{% endif %}">
+                        <img src="exploit.svg" alt="Exploit" class="sidebar-icon">
+                        <div class="sidebar-label">EXPLOIT</div>
+                    </div>
+                    <div class="sidebar-step {% if phase.id == 'analysis-install' %}active{% endif %}">
+                        <img src="install.svg" alt="Install" class="sidebar-icon">
+                        <div class="sidebar-label">INSTALL &amp;<br>PERSIST</div>
+                    </div>
+                    <div class="sidebar-step {% if phase.id == 'analysis-command' %}active{% endif %}">
+                        <img src="command.svg" alt="Command" class="sidebar-icon">
+                        <div class="sidebar-label">COMMAND &amp;<br>CONTROL</div>
+                    </div>
+                    <div class="sidebar-step {% if phase.id == 'analysis-objectives' %}active{% endif %}">
+                        <img src="actions.svg" alt="Actions" class="sidebar-icon">
+                        <div class="sidebar-label">ACTIONS ON<br>OBJECTIVES</div>
+                    </div>
+                    </div>
+                </div>
+                <div class="main-content">
                 <!-- Your content for each phase goes here -->
+                </div>
             </section>
             {% endfor %}
         </article>
