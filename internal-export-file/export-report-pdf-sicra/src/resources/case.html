@@ -9,7 +9,6 @@
     <body>
         <article id="cover">
             <div id="case-marking">{{ case_marking }}</div>
-            <div id="case-marking-color">{{ case_marking[4:].lower() }}</div>
             <div id="case-date">{{ case_report_date }}</div>
             <h1>Hendelsesrapport</h1>
             <div id="case-name">{{ case_name }}</div>
@@ -20,26 +19,41 @@
         </article>
 
         <article id="columns">
-            <h2>Overview</h2>
+            
             <section>
-                <h3 id="details-title">Details</h3>
-                <table>
+                <!-- <h3 id="details-title">Details</h3> -->
+                <table class="incident-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Hendelsesnivå:
+                                <span class="severity-{{ case_severity|lower }}">
+                                    {{ case_severity.upper() }}
+                                </span>
+                            </th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
-                            <th>Type</th>
-                            <th>Priority</th>
-                            <th>Severity</th>
-                        </tr>
-                        <tr>
-                            <td>{{ case_type }}</td>
-                            <td>{{ case_priority }}</td>
-                            <td>{{ case_severity }}</td>
+                            <td>
+                                <b>Alvorlighetsgrad:</b>
+                                <ul>
+                                    <li>{{ case_priority }}</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <b>Klassifisering:</b>
+                                <ul>
+                                    <li>B – Kompromittering</li>
+                                    <li>6 – Virksomhet</li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </section>
             <section>
-                <h3 id="description-title">Innledning</h3>
+                <h2 id="description-title">Innledning</h2>
                 <div>{{ case_description }}</div>
             </section>
             <section id="break">

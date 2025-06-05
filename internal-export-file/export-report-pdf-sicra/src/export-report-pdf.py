@@ -740,7 +740,7 @@ class ExportReportPdf:
         case_dict["content"] = (self.helper.api_impersonate.query(query=content_query))[
             "data"
         ]["case"].get("content", "No content available.")
-
+        self.helper.log_debug(f"{case_dict}") #debug ------------- remove when done ---
         # Extract values for inclusion in output pdf
         case_name = case_dict["name"]
         case_description = case_dict.get("description") or "No description available."
@@ -835,7 +835,7 @@ class ExportReportPdf:
         env = Environment(
             loader=FileSystemLoader(self.current_dir), finalize=self._finalize
         )
-        self.helper.log_debug(f"{context}") #debug
+        
         template = env.get_template("resources/case.html")
         html_string = template.render(context)
 
