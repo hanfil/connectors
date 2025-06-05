@@ -839,7 +839,7 @@ class ExportReportPdf:
         env = Environment(
             loader=FileSystemLoader(self.current_dir), finalize=self._finalize
         )
-        self.helper.log_debug(f"{case_dict}") #debug ------------- remove when done ---
+        self.helper.log_debug(f"{context}") #debug ------------- remove when done ---
         template = env.get_template("resources/case.html")
         html_string = template.render(context)
 
