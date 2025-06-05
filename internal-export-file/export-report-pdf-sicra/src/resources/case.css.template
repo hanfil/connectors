@@ -71,7 +71,7 @@
   @top-center { content: none }
   @top-left {
     margin-left: 2cm;
-    bottom: 50px;
+    padding-top: 50px;
     position: fixed;
   }
   background: url(cover.png);
@@ -320,7 +320,7 @@ td pre {
 
 .main-content {
   flex: 1;
-  width: 100%;
+  width: 110%;
   /* Optional: add margin-right if you want spacing */
 }
 .main-content h2, h3{
@@ -352,6 +352,7 @@ td pre {
   width: 56px;
   height: 56px;
   margin-bottom: 4px;
+  justify-content: center;
 }
 
 .sidebar-label {
@@ -360,6 +361,7 @@ td pre {
   text-align: center;
   color: #b0b0b0;
   letter-spacing: 1px;
+  justify-content: center
 }
 
 .active {
