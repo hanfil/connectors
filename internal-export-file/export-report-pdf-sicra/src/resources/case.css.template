@@ -292,6 +292,6 @@ td pre {
   @page: chapter;
 }
 
-.severity-high {
+.RED, .severity-high {
   color: red;
 }
