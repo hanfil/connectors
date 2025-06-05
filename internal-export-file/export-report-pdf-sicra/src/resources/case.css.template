@@ -168,7 +168,7 @@ h4 {
 }
 #cover #cover-logo {
   position: absolute;
-  top: 20cm;
+  top: 24cm;
   left: 2cm;
   /*width: 200px;  or your desired size */
 }
