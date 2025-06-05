@@ -829,6 +829,7 @@ class ExportReportPdf:
                     filters=export_filter
                 )
             )
+            self.helper.log_debug(f"{entities_list}") #debug ------------- remove when done ---
 
             # Process each STIX Object
             for entity in entities_list:
