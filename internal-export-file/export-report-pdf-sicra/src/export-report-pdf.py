@@ -786,7 +786,7 @@ class ExportReportPdf:
             }
         """
         case_priority_object = self.helper.api_impersonate.vocabulary.read(filters=case_priority_filters)
-        case_priority_desc = case_priority_object["description"]
+        case_priority_desc = case_priority_object["description"].replace("|","\n")
         # Store context for usage in html template
         context = {
             "case_name": case_name,

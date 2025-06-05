@@ -70,7 +70,7 @@
   @top-center { content: none }
   @top-left {
     margin-left: 2cm;
-    margin-top: 2cm;
+    top: 2cm;
   }
   background: url(cover.png);
   background-position: 60% center;
@@ -144,7 +144,7 @@ h4 {
   color: #ffffff;
   font-size: 12pt;
   font-weight: 500;
-  bottom: 18px;
+  top: 18px;
   float: right;
 }
 #cover #case-name {
