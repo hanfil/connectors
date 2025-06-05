@@ -71,7 +71,7 @@
   @top-center { content: none }
   @top-left {
     margin-left: 2cm;
-    top: 2cm;
+    top: 4cm;
     position: fixed;
   }
   background: url(cover.png);
@@ -124,7 +124,7 @@ h2 {
   @page: no-chapter;
   font-size: 28pt;
   color: <secondary_color>;
-  /* margin: 0 0cm 1cm; */
+  margin: 0 0cm 0cm; 
   /* padding: 1cm 1cm 1cm 3cm; */
   width: 21cm;
   string-set: heading content();
@@ -146,7 +146,7 @@ h4 {
   color: #ffffff;
   font-size: 12pt;
   font-weight: 500;
-  margin: auto;
+  margin: 1cm 1cm 1cm 1cm;
   bottom: 0;
   right: 0;
   position: fixed;
@@ -222,7 +222,7 @@ h4 {
   font-size: 40pt;
   line-height: 16pt;
   vertical-align: bottom;
-  margin-left: 1cm;
+  margin-left: 0.5cm;
 }
 
 #content img {
