@@ -312,6 +312,12 @@ td pre {
 .RED, .severity-high {
   color: red;
 }
+.AMBER, .AMBER-STRICT, .severity-medium {
+  color: orange;
+}
+.GREEN, .severity-low {
+  color: green;
+}
 
 .phase-section {
   display: flex;
