@@ -54,6 +54,8 @@ class ExportReportPdf:
                 spec_version
                 created_at
                 updated_at
+            }
+            ... on StixDomainObject {
                 killChainPhases {
                     id
                     entity_type
@@ -61,8 +63,6 @@ class ExportReportPdf:
                     phase_name
                     x_opencti_order
                 }
-            }
-            ... on StixDomainObject {
                 createdBy {
                     ... on Identity {
                         id
