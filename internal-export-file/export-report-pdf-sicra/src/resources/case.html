@@ -122,34 +122,45 @@
         <article id="contents">
             <section id="break">
             <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
+            {% set current_section = 'cyber_kill_chain' %}
             {{ current_section }}
             <h3 id="analysis-recon">Fase 1: Rekognosering</h3>
-            {{ current_section }}
+            {% set current_h3 = 'analysis-recon' %}
+            {{ current_h3 }}
             </section>
             
             <section id="break">
             <h3 id="analysis-delivery">Fase 2: Initiell sårbarhetsvektor</h3>
-            {{ current_section }}
+            {% set current_h3 = 'analysis-delivery' %}
+            {{ current_h3 }}
             </section>
 
             <section id="break">
             <h3 id="analysis-exploit">Fase 3: Utnyttelse av sårbarhet og svakheter</h3>
+            {% set current_h3 = 'analysis-exploit' %}
+            {{ current_h3 }}
             </section>
 
             <section id="break">
             <h3 id="analysis-install">Fase 4: Fotfeste</h3>
+            {% set current_h3 = 'analysis-install' %}
+            {{ current_h3 }}
             </section>
 
             <section id="break">
             <h3 id="analysis-command">Fase 5: Kommandosenter</h3>
+            {% set current_h3 = 'analysis-command' %}
+            {{ current_h3 }}
             </section>
 
             <section id="break">
             <h3 id="analysis-objectives">Fase 6: Angrepsmål</h3>
+            {% set current_h3 = 'analysis-objectives' %}
+            {{ current_h3 }}
             </section>
 
             <!-- Only show sidebar when under "Cyber Kill Chain" H2 -->
-            {% if current_section == 'analysis-title' %}
+            {% if current_section == 'cyber_kill_chain' %}
             <div class="attack-chain-sidebar">
             <div class="sidebar-step {% if current_h3 == 'analysis-recon' %}active{% endif %}">
                 <img src="recon.svg" alt="Recon" class="sidebar-icon">
