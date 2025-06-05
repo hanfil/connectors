@@ -119,7 +119,42 @@
             </section>
         </article>
 
+
         <article id="contents">
+            {% set current_section = 'cyber_kill_chain' %}
+            {% set phases = [
+                {'id': 'analysis-recon', 'key': 'recon', 'title': 'Fase 1: Rekognosering', 'icon': 'recon.svg', 'label': 'RECON'},
+                {'id': 'analysis-delivery', 'key': 'delivery', 'title': 'Fase 2: Initiell sårbarhetsvektor', 'icon': 'delivery.svg', 'label': 'DELIVERY'},
+                {'id': 'analysis-exploit', 'key': 'exploit', 'title': 'Fase 3: Utnyttelse av sårbarhet og svakheter', 'icon': 'exploit.svg', 'label': 'EXPLOIT'},
+                {'id': 'analysis-install', 'key': 'install', 'title': 'Fase 4: Fotfeste', 'icon': 'install.svg', 'label': 'INSTALL &<br>PERSIST'},
+                {'id': 'analysis-command', 'key': 'command', 'title': 'Fase 5: Kommandosenter', 'icon': 'command.svg', 'label': 'COMMAND &<br>CONTROL'},
+                {'id': 'analysis-objectives', 'key': 'objectives', 'title': 'Fase 6: Angrepsmål', 'icon': 'actions.svg', 'label': 'ACTIONS ON<br>OBJECTIVES'}
+            ] %}
+
+            <section id="break">
+                <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
+                
+                <!-- Sidebar positioned at the beginning -->
+                {% if current_section == 'cyber_kill_chain' %}
+                <div class="attack-chain-sidebar">
+                    {% for phase in phases %}
+                    <div class="sidebar-step" data-phase="{{ phase.key }}">
+                        <img src="{{ phase.icon }}" alt="{{ phase.label }}" class="sidebar-icon">
+                        <div class="sidebar-label">{{ phase.label | safe }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </section>
+
+            {% for phase in phases %}
+            <section id="break" class="phase-section" data-phase="{{ phase.key }}">
+                <h3 id="{{ phase.id }}">{{ phase.title }}</h3>
+                <!-- Your content for each phase goes here -->
+            </section>
+            {% endfor %}
+        </article>
+<!--         <article id="contents">
             <section id="break">
             <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
             {% set current_section = 'cyber_kill_chain' %}
@@ -159,7 +194,7 @@
             {{ current_h3 }}
             </section>
 
-            <!-- Only show sidebar when under "Cyber Kill Chain" H2 -->
+            Only show sidebar when under "Cyber Kill Chain" H2 
             {% if current_section == 'cyber_kill_chain' %}
             <div class="attack-chain-sidebar">
             <div class="sidebar-step {% if current_h3 == 'analysis-recon' %}active{% endif %}">
@@ -189,7 +224,7 @@
             </div>
             {% endif %}
 
-        </article>
+        </article> -->
 
         <article id="contents">
             <div id="break"></div>

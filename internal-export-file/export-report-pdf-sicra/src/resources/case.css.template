@@ -314,49 +314,38 @@ td pre {
 }
 
 .attack-chain-sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 120px;
-  height: 100vh;
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  z-index: 100;
-  padding-top: 16px;
+    position: fixed;
+    top: 120px;
+    right: 20px;
+    width: 100px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .sidebar-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 18px;
-  opacity: 0.28;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.4;
+}
+
+/* Highlight the first phase by default, or use JavaScript to highlight based on scroll */
+.sidebar-step:first-child {
+    opacity: 1.0;
 }
 
 .sidebar-icon {
-  width: 56px;
-  height: 56px;
-  margin-bottom: 4px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
 }
 
 .sidebar-label {
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
-  color: #b0b0b0;
-  letter-spacing: 1px;
-}
-
-.recon { color: #0094c6; }
-.delivery { color: #b1c7d6; }
-.exploit { color: #dcbab0; }
-.install { color: #b6cbb2; }
-.command { color: #b3b6c7; }
-.actions { color: #d1b2b7; }
-
-.active {
-  opacity: 1;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    color: #666;
 }
