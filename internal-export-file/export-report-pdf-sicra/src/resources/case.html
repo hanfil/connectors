@@ -87,26 +87,57 @@
         </article>
         <article id="content">
             <h2 id="content-title">
-                Content
+                Oppsummering
             </h2>
             {{case_content}}
         </article>
-
+        
         <article id="contents">
-            <h2>Table of contents</h2>
-            <h3>Overview</h3>
+            <div id="break"></div>
+            <h3>Innhold</h3>
             <ul>
-                <li><a href="#details-title"></a></li>
                 <li><a href="#description-title"></a></li>
-                <li><a href="#confidence-title"></a></li>
                 <li><a href="#content-title"></a></li>
+                <li><a href="#analysis-title"></a></li>
+                <ul>
+                    <li><a href="#analysis-recon"></a></li>
+                    <li><a href="#analysis-attack"></a></li>
+                    <li><a href="#analysis-exploit"></a></li>
+                    <li><a href="#analysis-foothold"></a></li>
+                    <li><a href="#analysis-c2"></a></li>
+                    <li><a href="#analysis-objectives"></a></li>
+                </ul>
+
                 {% if tasks.edges %}
                 {% if tasks.edges|length > 0 %}
                 <li><a href="#task_type-title"></a></li>
                 {% endif %}
                 {% endif %}
             </ul>
+        </article>
 
+        <article id="contents">
+            <div id="break"></div>
+            <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
+            <h3 id="analysis-recon">Fase 1: Rekognosering</h3>
+
+            <div id="break"></div>
+            <h3 id="analysis-attack">Fase 2: Initiell sårbarhetsvektor</h3>
+
+            <div id="break"></div>
+            <h3 id="analysis-exploit">Fase 3: Utnyttelse av sårbarhet og svakheter</h3>
+
+            <div id="break"></div>
+            <h3 id="analysis-foothold">Fase 4: Fotfeste</h3>
+
+            <div id="break"></div>
+            <h3 id="analysis-c2">Fase 5: Kommandosenter</h3>
+
+            <div id="break"></div>
+            <h3 id="analysis-objectives">Fase 6: Angrepsmål</h3>
+        </article>
+
+        <article id="contents">
             {% if entities %}
             <h3>Entities</h3>
             <ul>
