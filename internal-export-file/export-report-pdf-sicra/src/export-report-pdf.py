@@ -764,7 +764,7 @@ class ExportReportPdf:
         case_severity = case_dict["severity"]
         case_tasks = case_dict["tasks"]
         response_types = case_dict["response_types"]
-        case_priority_desc = self.helper.api_impersonate.vocabulary.read(id=case_priority)
+        case_priority_desc = self.helper.api_impersonate.vocabulary.read(name=case_priority)
         # Store context for usage in html template
         context = {
             "case_name": case_name,

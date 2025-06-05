@@ -69,7 +69,7 @@
   margin: 0;
   @top-center { content: none }
   @top-left {
-    margin: 3cm 0 0 3cm;
+    margin: 5cm 0 0 2cm;
   }
   background: url(cover.png);
   background-position: 60% center;
@@ -83,9 +83,12 @@
 }
 
 #case-marking {
-  bottom: -1cm;
   position: fixed;
-  align-content: center;
+  left: 0;
+  right: 0;
+  bottom: -1cm;
+  text-align: center;
+  width: 100%;
 }
 #case-contact {
   top: -1cm;
@@ -114,7 +117,7 @@ h2, h3, h4 {
   font-weight: 400;
 }
 h2 {
-  break-before: always;
+  /* break-before: always; */
   @page: no-chapter;
   font-size: 28pt;
   color: <secondary_color>;
