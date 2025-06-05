@@ -125,12 +125,12 @@
 
         <article id="contents">
             {% set phases = [
-                {'id': 'analysis-recon', 'key': 'recon', 'title': 'Fase 1: Rekognosering', 'icon': 'recon.svg', 'label': 'RECON'},
+                {'id': 'analysis-recon', 'key': 'reconnaissance', 'title': 'Fase 1: Rekognosering', 'icon': 'recon.svg', 'label': 'RECON'},
                 {'id': 'analysis-delivery', 'key': 'delivery', 'title': 'Fase 2: Initiell sårbarhetsvektor', 'icon': 'delivery.svg', 'label': 'DELIVERY'},
-                {'id': 'analysis-exploit', 'key': 'exploit', 'title': 'Fase 3: Utnyttelse av sårbarhet og svakheter', 'icon': 'exploit.svg', 'label': 'EXPLOIT'},
-                {'id': 'analysis-install', 'key': 'install', 'title': 'Fase 4: Fotfeste', 'icon': 'install.svg', 'label': 'INSTALL &<br>PERSIST'},
-                {'id': 'analysis-command', 'key': 'command', 'title': 'Fase 5: Kommandosenter', 'icon': 'command.svg', 'label': 'COMMAND &<br>CONTROL'},
-                {'id': 'analysis-objectives', 'key': 'objectives', 'title': 'Fase 6: Angrepsmål', 'icon': 'actions.svg', 'label': 'ACTIONS ON<br>OBJECTIVES'}
+                {'id': 'analysis-exploit', 'key': 'exploitation', 'title': 'Fase 3: Utnyttelse av sårbarhet og svakheter', 'icon': 'exploit.svg', 'label': 'EXPLOIT'},
+                {'id': 'analysis-install', 'key': 'installation', 'title': 'Fase 4: Fotfeste', 'icon': 'install.svg', 'label': 'INSTALL &<br>PERSIST'},
+                {'id': 'analysis-command', 'key': 'command-and-control', 'title': 'Fase 5: Kommandosenter', 'icon': 'command.svg', 'label': 'COMMAND &<br>CONTROL'},
+                {'id': 'analysis-objectives', 'key': 'actions-on-objectives', 'title': 'Fase 6: Angrepsmål', 'icon': 'actions.svg', 'label': 'ACTIONS ON<br>OBJECTIVES'}
             ] %}
 
             {% for phase in phases %}
@@ -142,6 +142,12 @@
                 <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
                 {% endif %}
                 <h3 id="{{ phase.id }}">{{ phase.title }}</h3>
+                
+                {% for stage in cyber_attack_lifecycle[phase.key] %}
+                    <p class="start_time">{{ stage.start_time }}</p>
+                    <p>{{ stage.description }}</p>
+                {% endfor %}
+
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
