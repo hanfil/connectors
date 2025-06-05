@@ -764,6 +764,7 @@ class ExportReportPdf:
         case_severity = case_dict["severity"]
         case_tasks = case_dict["tasks"]
         response_types = case_dict["response_types"]
+        case_type_desc = self.helper.api_impersonate.vocabulary.read(id=case_type)
         # Store context for usage in html template
         context = {
             "case_name": case_name,
@@ -782,6 +783,7 @@ class ExportReportPdf:
             "company_website": self.company_website,
             "tasks": case_tasks,
             "case_type": case_type,
+            "case_type_desc": case_type_desc,
             "case_priority": case_priority,
             "case_severity": case_severity,
             "response_types": response_types,
@@ -837,7 +839,7 @@ class ExportReportPdf:
         env = Environment(
             loader=FileSystemLoader(self.current_dir), finalize=self._finalize
         )
-        
+        self.helper.log_debug(f"{case_dict}") #debug ------------- remove when done ---
         template = env.get_template("resources/case.html")
         html_string = template.render(context)
 
