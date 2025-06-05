@@ -100,7 +100,6 @@ class ExportReportPdf:
         return dt.strftime("%B %d, %I:%M%p")
 
     def _process_message(self, data):
-        self.helper.log_debug(f"{data}") #debug ------------- remove when done ---
         file_name = data["file_name"]
         entity_id = data.get("entity_id")
         export_scope = data["export_scope"]
@@ -752,6 +751,9 @@ class ExportReportPdf:
         case_marking = case_dict.get("objectMarking", None)
         if case_marking:
             case_marking = case_marking[-1]["definition"]
+        # Adjust marking based on filter/filename
+        case_marking = file_name.split("_")[1]
+        
         case_external_refs = [
             external_ref_dict["url"]
             for external_ref_dict in case_dict["externalReferences"]
