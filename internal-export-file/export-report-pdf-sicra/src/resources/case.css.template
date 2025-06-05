@@ -69,7 +69,7 @@
   margin: 0;
   @top-center { content: none }
   @top-left {
-    margin: 5cm 0 0 2cm;
+    margin: 0 2cm 0 2cm;
   }
   background: url(cover.png);
   background-position: 60% center;
