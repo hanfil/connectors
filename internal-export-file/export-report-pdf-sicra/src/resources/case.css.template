@@ -71,7 +71,7 @@
   @top-center { content: none }
   @top-left {
     margin-left: 2cm;
-    padding-top: 50px;
+    margin-top: 50px;
     position: fixed;
   }
   background: url(cover.png);
