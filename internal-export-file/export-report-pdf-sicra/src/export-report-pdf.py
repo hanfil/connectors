@@ -763,6 +763,7 @@ class ExportReportPdf:
         case_priority = case_dict["priority"]
         case_severity = case_dict["severity"]
         case_tasks = case_dict["tasks"]
+        response_types = case_dict["response_types"]
         # Store context for usage in html template
         context = {
             "case_name": case_name,
@@ -783,6 +784,7 @@ class ExportReportPdf:
             "case_type": case_type,
             "case_priority": case_priority,
             "case_severity": case_severity,
+            "response_types": response_types,
             "entities": {},
             "observables": {},
         }

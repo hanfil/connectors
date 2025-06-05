@@ -44,8 +44,9 @@
                             <td>
                                 <b>Klassifisering:</b>
                                 <ul>
-                                    <li>B – Kompromittering</li>
-                                    <li>6 – Virksomhet</li>
+                                    {% for classification in response_types %}
+                                    <li>{{ classification }}</li>
+                                    {% endfor %}
                                 </ul>
                             </td>
                         </tr>
