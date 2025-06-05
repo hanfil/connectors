@@ -30,7 +30,6 @@
   @top-left {
     content: url('Sicra-Logo-Lockup-Horizontal-WithoutR-Black.svg');
     margin-top: 1cm;
-    height: 1cm;
     /* margin: 8px 4px 18px; */
   }
   @bottom-left {
@@ -311,6 +310,17 @@ td pre {
 
 .RED, .severity-high {
   color: red;
+}
+
+.phase-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.main-content {
+  flex: 1;
+  /* Optional: add margin-right if you want spacing */
 }
 
 .attack-chain-sidebar {

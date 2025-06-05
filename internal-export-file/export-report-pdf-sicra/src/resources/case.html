@@ -130,11 +130,6 @@
                 {'id': 'analysis-objectives', 'key': 'objectives', 'title': 'Fase 6: Angrepsmål', 'icon': 'actions.svg', 'label': 'ACTIONS ON<br>OBJECTIVES'}
             ] %}
 
-                
-                
-                
-            
-
             {% for phase in phases %}
             <section id="break" class="phase-section" data-phase="{{ phase.key }}">
                 
@@ -148,7 +143,6 @@
                 </div>
 
                 <div class="attack-chain-sidebar">
-                    <div class="attack-chain-sidebar">
                     <div class="sidebar-step {% if phase.id == 'analysis-recon' %}active{% endif %}">
                         <img src="recon.svg" alt="Recon" class="sidebar-icon">
                         <div class="sidebar-label">RECON</div>
@@ -172,7 +166,6 @@
                     <div class="sidebar-step {% if phase.id == 'analysis-objectives' %}active{% endif %}">
                         <img src="actions.svg" alt="Actions" class="sidebar-icon">
                         <div class="sidebar-label">ACTIONS ON<br>OBJECTIVES</div>
-                    </div>
                     </div>
                 </div>
             </section>
