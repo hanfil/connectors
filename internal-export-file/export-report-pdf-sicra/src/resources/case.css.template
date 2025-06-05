@@ -42,7 +42,7 @@
   @bottom-center {
     background: <secondary_color>;
     content: string(marking);
-    margin: 1cm
+    margin: 10px;
     display: block;
     height: .05cm;
     width: 100%;
