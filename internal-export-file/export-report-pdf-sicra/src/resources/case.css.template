@@ -234,7 +234,7 @@ section {
 }
 
 table {
-  margin: auto 0;
+  margin: 0 0;
   caption-side: top;
   empty-cells: show;
   table-layout: auto;
