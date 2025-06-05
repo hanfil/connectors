@@ -384,7 +384,7 @@ td pre {
 }
 
 .phase-section .main-content .stage-time {
-  min-width: 2cm;      /* Adjust as needed for your margin */
+  min-width: 0cm;      /* Adjust as needed for your margin */
   text-align: left;
   color: #222;
   font-family: monospace;
