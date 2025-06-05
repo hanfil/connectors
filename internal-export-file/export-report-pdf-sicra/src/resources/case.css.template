@@ -389,14 +389,11 @@ td pre {
   color: #222;
   font-family: monospace;
   font-size: 09pt;
-  margin-right: 1em;
-  /* Optional: push to absolute left if you want negative margin */
+  /*margin-right: 1em;
+   Optional: push to absolute left if you want negative margin */
   margin-left: -2cm;
 }
 
 .phase-section .main-content .stage-description {
   flex: 1;
-  text-align: left;
-  font-size: 11pt;
-  color: #222;
 }
