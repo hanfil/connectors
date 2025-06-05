@@ -21,6 +21,32 @@
             </div>
         </article>
 
+        <article id="contents">
+            <section id="break">
+                <h2>Innhold</h2>
+                <ul>
+                    <li><a href="#description-title"></a></li>
+                    <li><a href="#content-title"></a></li>
+                    <li><a href="#analysis-title"></a>
+                    <ul>
+                        <li><a href="#analysis-recon"></a></li>
+                        <li><a href="#analysis-delivery"></a></li>
+                        <li><a href="#analysis-exploit"></a></li>
+                        <li><a href="#analysis-install"></a></li>
+                        <li><a href="#analysis-command"></a></li>
+                        <li><a href="#analysis-objectives"></a></li>
+                    </ul>
+                    </li>
+
+                    {% if tasks.edges %}
+                    {% if tasks.edges|length > 0 %}
+                    <li><a href="#task_type-title"></a></li>
+                    {% endif %}
+                    {% endif %}
+                </ul>
+            </section>
+        </article>
+
         <article id="columns">
             
             <section>
@@ -94,32 +120,6 @@
                 Oppsummering
             </h2>
             {{case_content}}
-        </article>
-        
-        <article id="contents">
-            <section id="break">
-                <h2>Innhold</h2>
-                <ul>
-                    <li><a href="#description-title"></a></li>
-                    <li><a href="#content-title"></a></li>
-                    <li><a href="#analysis-title"></a>
-                    <ul>
-                        <li><a href="#analysis-recon"></a></li>
-                        <li><a href="#analysis-delivery"></a></li>
-                        <li><a href="#analysis-exploit"></a></li>
-                        <li><a href="#analysis-install"></a></li>
-                        <li><a href="#analysis-command"></a></li>
-                        <li><a href="#analysis-objectives"></a></li>
-                    </ul>
-                    </li>
-
-                    {% if tasks.edges %}
-                    {% if tasks.edges|length > 0 %}
-                    <li><a href="#task_type-title"></a></li>
-                    {% endif %}
-                    {% endif %}
-                </ul>
-            </section>
         </article>
 
 
@@ -217,7 +217,7 @@
             {% endif %}
         </article>
 
-        <article id="entities">
+        <!-- <article id="entities">
             {% for entity_type in entities %}
             <h3 id="{{ entity_type }}-title">{{ entity_type }}</h3>
             <section id="{{ entity_type }}">
@@ -280,7 +280,7 @@
                 </table>
             </section>
             {% endfor %}
-        </article>
+        </article> -->
         <article id="observables">
             {% for observable_type in observables %}
             <h3 id="{{ observable_type }}-title">{{ observable_type }}</h3>
