@@ -94,11 +94,11 @@
         
         <article id="contents">
             <div id="break"></div>
-            <h3>Innhold</h3>
+            <h2>Innhold</h2>
             <ul>
                 <li><a href="#description-title"></a></li>
                 <li><a href="#content-title"></a></li>
-                <li><a href="#analysis-title"></a></li>
+                <li><a href="#analysis-title"></a>
                 <ul>
                     <li><a href="#analysis-recon"></a></li>
                     <li><a href="#analysis-attack"></a></li>
@@ -107,6 +107,7 @@
                     <li><a href="#analysis-c2"></a></li>
                     <li><a href="#analysis-objectives"></a></li>
                 </ul>
+                </li>
 
                 {% if tasks.edges %}
                 {% if tasks.edges|length > 0 %}
@@ -138,6 +139,7 @@
         </article>
 
         <article id="contents">
+            <div id="break"></div>
             {% if entities %}
             <h3>Entities</h3>
             <ul>
