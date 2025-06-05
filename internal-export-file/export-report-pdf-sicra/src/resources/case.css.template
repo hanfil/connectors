@@ -168,7 +168,7 @@ h4 {
 }
 #cover #cover-logo {
   position: absolute;
-  top: 24cm;
+  top: 23cm;
   left: 2cm;
   /*width: 200px;  or your desired size */
 }
@@ -337,7 +337,8 @@ td pre {
   align-items: center;
   justify-content: center;
   z-index: 100;
-  padding-top: 1cm;
+  margin-top: 1cm;
+  margin-right: 1cm;
 }
 
 .phase-section .sidebar-step {
@@ -345,17 +346,17 @@ td pre {
   flex-direction: column;
   align-items: center;
   margin: 18px;
-  margin-left: 30px;
   opacity: 0.28;
-  width: 65px;
+  width: 56px;
 }
 .phase-section .active {
   opacity: 1;
 }
 
 .phase-section .sidebar-step .sidebar-icon {
-  width: 56px;
-  height: 56px;
+  /*width: 56px;
+  height: 56px; */
+  width: 100%;
   margin-bottom: 4px;
   justify-content: center;
 }
