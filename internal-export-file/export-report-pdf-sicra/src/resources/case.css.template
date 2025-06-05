@@ -376,3 +376,27 @@ td pre {
   width: 100%;
 }
 
+.phase-section .main-content .stage-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.phase-section .main-content .stage-time {
+  min-width: 4cm;      /* Adjust as needed for your margin */
+  text-align: left;
+  color: #222;
+  font-family: monospace;
+  font-size: 11pt;
+  margin-right: 1em;
+  /* Optional: push to absolute left if you want negative margin */
+  margin-left: -2cm;
+}
+
+.phase-section .main-content .stage-description {
+  flex: 1;
+  text-align: left;
+  font-size: 11pt;
+  color: #222;
+}
