@@ -168,7 +168,7 @@ h4 {
 }
 #cover #cover-logo {
   position: absolute;
-  top: 3cm;
+  bottom: 0;
   left: 2cm;
   /*width: 200px;  or your desired size */
 }
@@ -346,7 +346,7 @@ td pre {
   align-items: center;
   margin: 18px;
   opacity: 0.28;
-  width: 100%;
+  width: 56px;
 }
 .phase-section .active {
   opacity: 1;
