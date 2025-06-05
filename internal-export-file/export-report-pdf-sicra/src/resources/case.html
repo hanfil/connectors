@@ -94,28 +94,29 @@
         </article>
         
         <article id="contents">
-            <div id="break"></div>
-            <h2>Innhold</h2>
-            <ul>
-                <li><a href="#description-title"></a></li>
-                <li><a href="#content-title"></a></li>
-                <li><a href="#analysis-title"></a>
+            <section id="break">
+                <h2>Innhold</h2>
                 <ul>
-                    <li><a href="#analysis-recon"></a></li>
-                    <li><a href="#analysis-attack"></a></li>
-                    <li><a href="#analysis-exploit"></a></li>
-                    <li><a href="#analysis-foothold"></a></li>
-                    <li><a href="#analysis-c2"></a></li>
-                    <li><a href="#analysis-objectives"></a></li>
-                </ul>
-                </li>
+                    <li><a href="#description-title"></a></li>
+                    <li><a href="#content-title"></a></li>
+                    <li><a href="#analysis-title"></a>
+                    <ul>
+                        <li><a href="#analysis-recon"></a></li>
+                        <li><a href="#analysis-attack"></a></li>
+                        <li><a href="#analysis-exploit"></a></li>
+                        <li><a href="#analysis-foothold"></a></li>
+                        <li><a href="#analysis-c2"></a></li>
+                        <li><a href="#analysis-objectives"></a></li>
+                    </ul>
+                    </li>
 
-                {% if tasks.edges %}
-                {% if tasks.edges|length > 0 %}
-                <li><a href="#task_type-title"></a></li>
-                {% endif %}
-                {% endif %}
-            </ul>
+                    {% if tasks.edges %}
+                    {% if tasks.edges|length > 0 %}
+                    <li><a href="#task_type-title"></a></li>
+                    {% endif %}
+                    {% endif %}
+                </ul>
+            </section>
         </article>
 
         <article id="contents">
