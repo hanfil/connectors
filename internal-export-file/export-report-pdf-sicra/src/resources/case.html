@@ -41,11 +41,9 @@
                             </td>
                             <td>
                                 <b>Klassifisering:</b>
-                                <ul>
-                                    {% for classification in response_types %}
-                                    <li>{{ classification }}</li>
-                                    {% endfor %}
-                                </ul>
+                                {% for classification in response_types %}
+                                <p>{{ classification }}</p>
+                                {% endfor %}
                             </td>
                         </tr>
                     </tbody>

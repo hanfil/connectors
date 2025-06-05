@@ -41,8 +41,7 @@
   }
   @bottom-center {
     background: <secondary_color>;
-    content: string(marking);
-    margin: 10px;
+    content: '';
     display: block;
     height: .05cm;
     width: 100%;
@@ -84,10 +83,9 @@
 }
 
 #case-marking {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  string-set: marking content();
+  bottom: 0;
+  position: fixed;
+  align-content: center;
 }
 #case-contact {
   top: -1cm;
@@ -292,4 +290,8 @@ td pre {
   height: 297mm;
   justify-content: center;
   @page: chapter;
+}
+
+.severity-high {
+  color: red;
 }
