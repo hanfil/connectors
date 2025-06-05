@@ -56,13 +56,6 @@ class ExportReportPdf:
                 updated_at
             }
             ... on StixDomainObject {
-                killChainPhases {
-                    id
-                    entity_type
-                    kill_chain_name
-                    phase_name
-                    x_opencti_order
-                }
                 createdBy {
                     ... on Identity {
                         id
@@ -452,6 +445,13 @@ class ExportReportPdf:
                 description
                 start_time
                 stop_time
+                killChainPhases {
+                    id
+                    entity_type
+                    kill_chain_name
+                    phase_name
+                    x_opencti_order
+                }
             }
             ... on StixSightingRelationship {
                 id
