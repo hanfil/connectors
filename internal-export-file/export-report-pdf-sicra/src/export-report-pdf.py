@@ -1363,6 +1363,16 @@ class ExportReportPdf:
                 key=lambda x: datetime.strptime(x["start_time"], "%Y-%m-%dT%H:%M:%S.%fZ")
             )
 
+        # Retrive notes
+        self.helper.log_debug(f"ACCESS_FILTER={access_filter}")
+        notes = self.helper.api.note.list(
+            filters=[
+                {"key": "objectContains", "values": [case_id]}
+            ]
+        )
+        for note in notes:
+            self.helper.log_debug(note["content"])
+
         # Render html with input variables
         env = Environment(
             loader=FileSystemLoader(self.current_dir), finalize=self._finalize
