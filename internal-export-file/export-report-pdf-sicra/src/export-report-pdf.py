@@ -1368,7 +1368,7 @@ class ExportReportPdf:
             filters={
                 "mode": "and",
                 "filters": [
-                    {"key": "objectContains", "values": [case_id], "operator": "eq", "mode": "or"},
+                    {"key": "objects", "values": [case_id], "operator": "eq", "mode": "or"},
                     access_filter["filters"][0]  # The objectMarking filter
                 ],
                 "filterGroups": []
