@@ -1379,7 +1379,6 @@ class ExportReportPdf:
         for note in notes:
             note["content_html"] = markdown.markdown(note["content"])
             context["notes"].append(note)
-            self.helper.log_debug(note)
 
         # Render html with input variables
         env = Environment(
