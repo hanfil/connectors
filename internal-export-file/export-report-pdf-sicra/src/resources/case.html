@@ -141,6 +141,14 @@
                     <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
                     {% endif %}
                     <h3 id="{{ phase.id }}">{{ phase.title }}</h3>
+
+                    {% for note in notes %}
+                    {% for label in note.objectLabel or [] %}
+                    {% if label == phase.id+"-intro" %}
+                    <p>{{ note.content_html | safe }}</p>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
                     
                     {% for stage in cyber_attack_lifecycle[phase.key] %}
                     <div class="stage-row">

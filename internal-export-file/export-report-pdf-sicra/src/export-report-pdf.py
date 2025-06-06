@@ -17,6 +17,8 @@ from pygal_maps_world.i18n import COUNTRIES
 from pygal_maps_world.maps import World
 from weasyprint import HTML
 
+import markdown
+
 
 CMARKGFM_OPTIONS = (
     cmarkgfmOptions.CMARK_OPT_GITHUB_PRE_LANG  # Use GitHub-style tags for code blocks
@@ -1375,6 +1377,7 @@ class ExportReportPdf:
             }
         )
         for note in notes:
+            note["content_html"] = markdown.markdown(note["content"])
             context["notes"].append(note)
             self.helper.log_debug(note)
 
