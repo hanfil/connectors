@@ -1301,6 +1301,7 @@ class ExportReportPdf:
                 "command-and-control": [],
                 "actions-on-objectives": []
             },
+            "notes": []
         }
 
         object_ids = []
@@ -1363,7 +1364,6 @@ class ExportReportPdf:
             )
 
         # Retrive notes
-        self.helper.log_debug(f"ACCESS_FILTER={access_filter}")
         notes = self.helper.api.note.list(
             filters={
                 "mode": "and",
@@ -1375,7 +1375,8 @@ class ExportReportPdf:
             }
         )
         for note in notes:
-            self.helper.log_debug(note["content"])
+            context["notes"].append(note)
+            self.helper.log_debug(note)
 
         # Render html with input variables
         env = Environment(
