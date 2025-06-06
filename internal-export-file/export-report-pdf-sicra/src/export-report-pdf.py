@@ -16,7 +16,6 @@ from pycti.utils.constants import StixCyberObservableTypes
 from pygal_maps_world.i18n import COUNTRIES
 from pygal_maps_world.maps import World
 from weasyprint import HTML
-from datetime import datetime
 
 
 CMARKGFM_OPTIONS = (
@@ -1360,7 +1359,7 @@ class ExportReportPdf:
         # Sort lists based on timestamp
         for phase in context["cyber_attack_lifecycle"]:
             context["cyber_attack_lifecycle"][phase].sort(
-                key=lambda x: datetime.strptime(x["start_time"], "%Y-%m-%dT%H:%M:%S.%fZ")
+                key=lambda x: datetime.datetime.strptime(x["start_time"], "%Y-%m-%dT%H:%M:%S.%fZ")
             )
 
         # Retrive notes
