@@ -144,8 +144,8 @@
 
                     {% for note in notes %}
                     {% for label in note.objectLabel or [] %}
-                    {% if label == phase.id+"-intro" %}
-                    <p>{{ note.content_html | safe }}</p>
+                    {% if label.value == phase.id+"-intro" %}
+                    {{ note.content_html | safe }}
                     {% endif %}
                     {% endfor %}
                     {% endfor %}
@@ -155,6 +155,14 @@
                         <div class="stage-time">{{ stage.start_time.replace("T","<br>") | safe }}</div>
                         <div class="stage-description">{{ stage.description }}</div>
                     </div>
+                    {% endfor %}
+
+                    {% for note in notes %}
+                    {% for label in note.objectLabel or [] %}
+                    {% if label.value == phase.id+"-outro" %}
+                    {{ note.content_html | safe }}
+                    {% endif %}
+                    {% endfor %}
                     {% endfor %}
 
                     Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
