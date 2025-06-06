@@ -1365,9 +1365,14 @@ class ExportReportPdf:
         # Retrive notes
         self.helper.log_debug(f"ACCESS_FILTER={access_filter}")
         notes = self.helper.api.note.list(
-            filters=[
-                {"key": "objectContains", "values": [case_id]}
-            ]
+            filters={
+                "mode": "and",
+                "filters": [
+                    {"key": "objectContains", "values": [case_id], "operator": "eq", "mode": "or"},
+                    access_filter["filters"][0]  # The objectMarking filter
+                ],
+                "filterGroups": []
+            }
         )
         for note in notes:
             self.helper.log_debug(note["content"])
