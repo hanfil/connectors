@@ -16,6 +16,8 @@ from pycti.utils.constants import StixCyberObservableTypes
 from pygal_maps_world.i18n import COUNTRIES
 from pygal_maps_world.maps import World
 from weasyprint import HTML
+from datetime import datetime
+
 
 CMARKGFM_OPTIONS = (
     cmarkgfmOptions.CMARK_OPT_GITHUB_PRE_LANG  # Use GitHub-style tags for code blocks
@@ -1354,6 +1356,12 @@ class ExportReportPdf:
                         context["entities"][obj_entity_type] = []
 
                     context["entities"][obj_entity_type].append(entity)
+
+        # Sort lists based on timestamp
+        for phase in context["cyber_attack_lifecycle"]:
+            context["cyber_attack_lifecycle"][phase].sort(
+                key=lambda x: datetime.strptime(x["start_time"], "%Y-%m-%dT%H:%M:%S.%fZ")
+            )
 
         # Render html with input variables
         env = Environment(
