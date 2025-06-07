@@ -452,18 +452,19 @@ td pre {
   line-height: 1.5;
 }
 
-.connector-line {
+.kill-chain-phase::before {
+  content: '';
   position: absolute;
-  left: 42px;
-  height: calc(100% + 40px);
+  left: 42px; /* Adjust to center with your icon */
+  top: 80px; /* Start after the icon */
+  bottom: -40px; /* Extend to next phase */
   width: 2px;
-  background: #2b2d42;
-  top: 60px;
+  background-color: #2b2d42;
   z-index: 1;
 }
 
 /* Last phase shouldn't have connector */
-.kill-chain-phase:last-child .connector-line {
+.kill-chain-phase:last-child::before {
   display: none;
 }
 
