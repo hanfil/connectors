@@ -1366,6 +1366,7 @@ class ExportReportPdf:
             )
 
         # Retrive notes
+        self.helper.log_debug(f"{access_filter}")
         notes = self.helper.api.note.list(
             filters={
                 "mode": "and",

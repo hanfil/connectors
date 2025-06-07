@@ -353,7 +353,7 @@ td pre {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 24px;
+  margin: 25px;
   opacity: 0.28;
   width: 60px;
 }
