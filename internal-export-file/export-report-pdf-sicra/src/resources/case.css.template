@@ -456,7 +456,7 @@ td pre {
   content: '';
   position: absolute;
   left: 42px; /* Adjust to center with your icon */
-  top: 80px; /* Start after the icon */
+  top: 100px; /* Start after the icon */
   bottom: -40px; /* Extend to next phase */
   width: 2px;
   background-color: #2b2d42;
