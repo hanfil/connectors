@@ -29,7 +29,7 @@
 @page {
   @top-left {
     content: url('Sicra-Logo-Lockup-Horizontal-WithoutR-Black.svg');
-    margin-top: 0.5cm;
+    /*margin-top: 0.5cm;
     /* margin: 8px 4px 18px; */
   }
   @bottom-left {
@@ -343,10 +343,10 @@ td pre {
   align-items: center;
   justify-content: center;
   z-index: 100;
-  margin-top: 1cm;
-  /* margin-left: 2cm; */
+  /*margin-top: 1cm;
+   margin-left: 2cm; */
   position: absolute;
-  right: -2cm;
+  right: -2.5cm;
 }
 
 .phase-section .sidebar-step {
