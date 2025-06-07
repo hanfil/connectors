@@ -1366,16 +1366,16 @@ class ExportReportPdf:
             )
 
         # Retrive notes
-        self.helper.log_debug(f"{access_filter}")
-        notes = self.helper.api.note.list(
-            filters={
+        notes_filter = {
                 "mode": "and",
                 "filters": [
-                    {"key": "objects", "values": [case_id], "operator": "eq", "mode": "or"},
-                    access_filter["filters"][0]  # The objectMarking filter
+                    {"key": "objects", "values": [case_id], "operator": "eq", "mode": "or"}
                 ],
                 "filterGroups": []
             }
+        notes_filter["filters"] += access_filter["filters"]
+        notes = self.helper.api.note.list(
+            filters=notes_filter
         )
         for note in notes:
             note["content_html"] = markdown.markdown(note["content"])
