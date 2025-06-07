@@ -120,32 +120,35 @@
                 Oppsummering
             </h2>
             {{case_content}}
-
-            <div class="kill-chain-container">
-            {% for phase in phases %}
-                {% for note in notes %}
-                    {% for label in note.objectLabel or [] %}
-                        {% if label.value == phase.id+"-summary" %}
-                <div class="kill-chain-phase {{ phase.id }}">
-                    <div class="phase-icon">
-                        <img src="{{ phase.icon }}">
-                    </div>
-                    <div class="connector-line"></div>
-                    <div class="phase-content">
-                    <div class="phase-title">{{ phase.title }}</div>
-                    <div class="phase-description">
-                        {{ note.content_html | safe }}
-                    </div>
-                    </div>
-                </div>
-                        {% endif %}
-                    {% endfor %}
-                {% endfor %}
-            {% endfor %}
-            </div>
         </article>
 
         <article id="contents">
+            <section id="break">
+                <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
+
+                <div class="kill-chain-container">
+                {% for phase in phases %}
+                    {% for note in notes %}
+                        {% for label in note.objectLabel or [] %}
+                            {% if label.value == phase.id+"-summary" %}
+                    <div class="kill-chain-phase {{ phase.id }}">
+                        <div class="phase-icon">
+                            <img src="{{ phase.icon }}">
+                        </div>
+                        <div class="connector-line"></div>
+                        <div class="phase-content">
+                        <div class="phase-title">{{ phase.title }}</div>
+                        <div class="phase-description">
+                            {{ note.content_html | safe }}
+                        </div>
+                        </div>
+                    </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+                </div>
+            </section>
             {% for phase in phases %}
             <section id="break" class="phase-section" data-phase="{{ phase.key }}">
                 <div class="attack-chain-sidebar">
@@ -176,9 +179,6 @@
                 </div>
                 
                 <div class="main-content">
-                    {% if phase.id == 'analysis-recon' %}
-                    <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
-                    {% endif %}
                     <h3 id="{{ phase.id }}">{{ phase.title }}</h3>
 
                     {% for note in notes %}
