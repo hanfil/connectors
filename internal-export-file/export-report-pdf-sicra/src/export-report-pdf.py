@@ -1387,7 +1387,6 @@ class ExportReportPdf:
         )
         for note in notes:
             note["content_html"] = markdown.markdown(note["content"])
-            note["content_html"].replace("```","<code>")
             context["notes"].append(note)
 
         # Render html with input variables
