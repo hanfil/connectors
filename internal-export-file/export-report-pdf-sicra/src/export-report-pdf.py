@@ -1295,12 +1295,12 @@ class ExportReportPdf:
             "entities": {},
             "observables": {},
             "phases": [
-                {'id': 'analysis-recon', 'key': 'reconnaissance', 'title': 'Fase 1: Rekognosering', 'icon': 'recon.svg', 'label': 'RECON'},
-                {'id': 'analysis-delivery', 'key': 'delivery', 'title': 'Fase 2: Initiell sårbarhetsvektor', 'icon': 'delivery.svg', 'label': 'DELIVERY'},
-                {'id': 'analysis-exploit', 'key': 'exploitation', 'title': 'Fase 3: Utnyttelse av sårbarhet og svakheter', 'icon': 'exploit.svg', 'label': 'EXPLOIT'},
-                {'id': 'analysis-install', 'key': 'installation', 'title': 'Fase 4: Fotfeste', 'icon': 'install.svg', 'label': 'INSTALL &<br>PERSIST'},
-                {'id': 'analysis-command', 'key': 'command-and-control', 'title': 'Fase 5: Kommandosenter', 'icon': 'command.svg', 'label': 'COMMAND &<br>CONTROL'},
-                {'id': 'analysis-objectives', 'key': 'actions-on-objectives', 'title': 'Fase 6: Angrepsmål', 'icon': 'actions.svg', 'label': 'ACTIONS ON<br>OBJECTIVES'}
+                {'id': 'analysis-recon', 'key': 'reconnaissance', 'title': 'Rekognosering', 'icon': 'recon.svg', 'label': 'RECON'},
+                {'id': 'analysis-delivery', 'key': 'delivery', 'title': 'Initiell sårbarhetsvektor', 'icon': 'delivery.svg', 'label': 'DELIVERY'},
+                {'id': 'analysis-exploit', 'key': 'exploitation', 'title': 'Utnyttelse av sårbarhet og svakheter', 'icon': 'exploit.svg', 'label': 'EXPLOIT'},
+                {'id': 'analysis-install', 'key': 'installation', 'title': 'Fotfeste', 'icon': 'install.svg', 'label': 'INSTALL &<br>PERSIST'},
+                {'id': 'analysis-command', 'key': 'command-and-control', 'title': 'Kommandosenter', 'icon': 'command.svg', 'label': 'COMMAND &<br>CONTROL'},
+                {'id': 'analysis-objectives', 'key': 'actions-on-objectives', 'title': 'Trusselaktørens hensikt', 'icon': 'actions.svg', 'label': 'ACTIONS ON<br>OBJECTIVES'}
             ],
             "cyber_attack_lifecycle": {
                 "reconnaissance": [],

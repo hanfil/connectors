@@ -455,16 +455,15 @@ td pre {
 .kill-chain-phase::before {
   content: '';
   position: absolute;
-  left: 40px; /* Adjust to center with your icon */
+  left: 41px; /* Adjust to center with your icon */
   top: 80px; /* Start after the icon */
   bottom: -80px; /* Extend to next phase */
   width: 2px;
   background: linear-gradient(to bottom, 
-    transparent 0%, 
-    #34495e 30%,
-    #6c3483 60%,
+    transparent 5%,
+    #34495e 40%,
     #c0392b 90%, 
-    transparent 100%);
+    transparent 95%);
   z-index: 1;
 }
 

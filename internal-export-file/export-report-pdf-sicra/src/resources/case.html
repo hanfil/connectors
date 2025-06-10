@@ -27,6 +27,7 @@
                 <ul>
                     <li><a href="#description-title"></a></li>
                     <li><a href="#content-title"></a></li>
+                    <li><a href="#threat-actor-overview"></a></li>
                     <li><a href="#analysis-title"></a>
                     <ul>
                         <li><a href="#analysis-recon"></a></li>
@@ -37,6 +38,7 @@
                         <li><a href="#analysis-objectives"></a></li>
                     </ul>
                     </li>
+                    <li><a href="#attachment-title"></a>
 
                     {% if tasks.edges %}
                     {% if tasks.edges|length > 0 %}
@@ -124,7 +126,7 @@
 
         <article id="contents">
             <section id="break">
-                <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
+                <h2 id="threat-actor-overview">Trusselaktørens handlinger</h2>
 
                 <div class="kill-chain-container">
                 {% for phase in phases %}
@@ -178,6 +180,9 @@
                 </div>
                 
                 <div class="main-content">
+                    {% if phase.id=="analysis-recon" %}
+                    <h2 id="analysis-title">Detaljert analyse av angrepet</h2>
+                    {% endif %}
                     <h3 id="{{ phase.id }}">{{ phase.title }}</h3>
 
                     {% for note in notes %}
@@ -208,6 +213,20 @@
                 
             </section>
             {% endfor %}
+        </article>
+
+        <article id="contents">
+            <section id="break">
+                <h2 id="attachment-title">Vedlegg</h2>
+                {% for note in notes %}
+                {% for label in note.objectLabel or [] %}
+                    {% if label.value == "attachment" %}
+                    <h3>{{ note.attribute_abstract | safe }}</h3>
+                    <div>{{ note.content_html | safe }}</div>
+                    {% endif %}
+                {% endfor %}
+                {% endfor %}
+            </section>
         </article>
 
         <article id="contents">
