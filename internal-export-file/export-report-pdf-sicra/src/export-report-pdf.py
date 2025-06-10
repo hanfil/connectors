@@ -17,7 +17,7 @@ from pygal_maps_world.i18n import COUNTRIES
 from pygal_maps_world.maps import World
 from weasyprint import HTML
 
-import markdown
+import markdown2
 
 
 CMARKGFM_OPTIONS = (
@@ -1386,7 +1386,7 @@ class ExportReportPdf:
             filters=notes_filter
         )
         for note in notes:
-            note["content_html"] = markdown.markdown(note["content"])
+            note["content_html"] = markdown2.markdown(note["content"])
             context["notes"].append(note)
 
         # Render html with input variables
