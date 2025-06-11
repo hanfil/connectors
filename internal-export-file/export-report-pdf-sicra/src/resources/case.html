@@ -221,10 +221,11 @@
                 {% for note in notes %}
                 {% for label in note.objectLabel or [] %}
                     {% if label.value == "attachment" %}
-                <div style="break-inside: avoid" id="break">
+                <div style="break-inside: avoid">
                     <h3>{{ note.attribute_abstract | safe }}</h3>
                     {{ note.content_html | safe }}
                 </div>
+                <div id="break"></div>
                     {% endif %}
                 {% endfor %}
                 {% endfor %}
