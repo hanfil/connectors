@@ -17,7 +17,7 @@ from pygal_maps_world.i18n import COUNTRIES
 from pygal_maps_world.maps import World
 from weasyprint import HTML
 
-import markdown2
+import markdown
 
 
 CMARKGFM_OPTIONS = (

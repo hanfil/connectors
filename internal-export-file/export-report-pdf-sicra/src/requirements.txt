@@ -6,4 +6,4 @@ wheel==0.45.1
 CairoSVG==2.7.1
 pygal_maps_world==1.0.2
 cmarkgfm==2024.11.20
-markdown2
+markdown
