@@ -28,6 +28,7 @@
                     <li><a href="#description-title"></a></li>
                     <li><a href="#content-title"></a></li>
                     <li><a href="#recommendations"></a></li>
+                    <li><a href="#investigative-bias"></a></li>
                     <li><a href="#threat-actor-overview"></a></li>
                     <li><a href="#analysis-title"></a>
                     <ul>
@@ -132,6 +133,19 @@
             {% for note in notes %}
                 {% for label in note.objectLabel or [] %}
                     {% if label.value == "recommendations" %}
+                    {{ note.content_html | safe }}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </article>
+        <div id="break"></div>
+        <article id="content">
+            <h2 id="investigative-bias">
+                Anbefalte tiltak
+            </h2>
+            {% for note in notes %}
+                {% for label in note.objectLabel or [] %}
+                    {% if label.value == "investigative-bias" %}
                     {{ note.content_html | safe }}
                     {% endif %}
                 {% endfor %}
