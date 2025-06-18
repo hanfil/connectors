@@ -123,6 +123,18 @@
             </h2>
             {{case_content}}
         </article>
+        <article id="content">
+            <h2 id="content-title">
+                Anbefalte tiltak
+            </h2>
+            {% for note in notes %}
+                {% for label in note.objectLabel or [] %}
+                    {% if label.value == "recommendations" %}
+                    {{ note.content_html | safe }}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </article>
 
         <article id="contents">
             <section id="break">
@@ -232,6 +244,7 @@
             </section>
         </article>
 
+        <!--
         <article id="contents">
             <div id="break"></div>
             {% if entities %}
@@ -259,7 +272,7 @@
             {% endif %}
         </article>
 
-        <!-- <article id="entities">
+        <article id="entities">
             {% for entity_type in entities %}
             <h3 id="{{ entity_type }}-title">{{ entity_type }}</h3>
             <section id="{{ entity_type }}">
@@ -322,7 +335,7 @@
                 </table>
             </section>
             {% endfor %}
-        </article> -->
+        </article> 
         <article id="observables">
             {% for observable_type in observables %}
             <h3 id="{{ observable_type }}-title">{{ observable_type }}</h3>
@@ -354,5 +367,6 @@
                 </ul>
             </section>
         </article>
+        -->
     </body>
 </html>
