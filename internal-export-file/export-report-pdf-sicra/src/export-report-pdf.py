@@ -1336,6 +1336,7 @@ class ExportReportPdf:
                     # Check to see if there is a cyber-attack-lifecycle killchain
                     for killChainPhase in entity["killChainPhases"]:
                         if killChainPhase["kill_chain_name"] == "cyber-attack-lifecycle":
+                            entity["description_html"] = markdown.markdown(entity["description"])
                             context["cyber_attack_lifecycle"][killChainPhase["phase_name"]].append(entity)
                 # ------ #
                 

@@ -225,7 +225,7 @@
                     {% for stage in cyber_attack_lifecycle[phase.key] %}
                     <div class="stage-row">
                         <div class="stage-time">{{ stage.start_time.replace("T","<br>") | safe }}</div>
-                        <div class="stage-description">{{ stage.description }}</div>
+                        <div class="stage-description">{{ stage.description_html }}</div>
                     </div>
                     {% endfor %}
 
