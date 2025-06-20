@@ -311,13 +311,16 @@ td pre {
 }
 
 .RED, .severity-high {
-  color: red;
+  color: #FF2B2B;
+  background-color: #000000;
 }
 .AMBER, .AMBER-STRICT, .severity-medium {
-  color: orange;
+  color: #FFC000;
+  background-color: #000000;
 }
 .GREEN, .severity-low {
-  color: green;
+  color: #33FF00;
+  background-color: #000000;
 }
 
 .phase-section {
