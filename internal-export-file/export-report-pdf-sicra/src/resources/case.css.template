@@ -313,7 +313,7 @@ td pre {
 .RED, .severity-high {
   color: red;
 }
-.AMBER, .AMBER+STRICT, .severity-medium {
+.AMBER, .AMBER-STRICT, .severity-medium {
   color: orange;
 }
 .GREEN, .severity-low {
