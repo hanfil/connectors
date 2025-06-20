@@ -313,17 +313,17 @@ td pre {
 .RED, .severity-high {
   color: #FF2B2B;
   background-color: #000000;
-  width: fit-content;
+  width: auto;
 }
 .AMBER, .AMBER-STRICT, .severity-medium {
   color: #FFC000;
   background-color: #000000;
-  width: fit-content;
+  width: auto;
 }
 .GREEN, .severity-low {
   color: #33FF00;
   background-color: #000000;
-  width: fit-content;
+  width: auto;
 }
 
 .phase-section {
